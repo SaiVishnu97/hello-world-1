@@ -1,0 +1,4 @@
+tomcat01 ansible_host=172.31.85.60 ansible_user=ubuntu
+
+[tomcatgrp]
+tomcat01

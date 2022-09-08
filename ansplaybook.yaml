@@ -1,0 +1,8 @@
+- name: Deploying to tomcat server
+  hosts: tomcat01
+  become: yes
+  tasks:
+  - name: Copying the .war file to the tomcat server location
+    src: /var/lib/jenkins/workspace/samplejavadeployment/hello-world.war
+    dest: /var/lib/tomcat9/webapps/
+    

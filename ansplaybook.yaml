@@ -1,9 +1,10 @@
 - name: Deploying to tomcat server
   hosts: tomcat01
   become: yes
+  vars_files:
+  - external_vars.yml
   tasks:
   - name: Copying the .war file to the tomcat server location
     ansible.builtin.copy:
-      src: target/hello-world.war
+      src: {{some_var}}
       dest: /var/lib/tomcat9/webapps/
-    

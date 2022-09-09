@@ -4,6 +4,6 @@
   tasks:
   - name: Copying the .war file to the tomcat server location
     ansible.builtin.copy:
-      src: /var/lib/jenkins/workspace/samplejavadeployment/target/hello-world.war
+      src: target/hello-world.war
       dest: /var/lib/tomcat9/webapps/
     

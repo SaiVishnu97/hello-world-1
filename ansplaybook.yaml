@@ -6,5 +6,5 @@
   tasks:
   - name: Copying the .war file to the tomcat server location
     ansible.builtin.copy:
-      src: {{some_var}}
+      src: "{{some_var}}"
       dest: /var/lib/tomcat9/webapps/

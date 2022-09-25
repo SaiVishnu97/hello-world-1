@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helloworlddemo
+  name: helloworlddemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworlddemo
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: helloworlddemo
+    spec:
+      containers:
+      - image: saivishnukottedockerid/helloworlddemo:v1
+        imagePullPolicy: Always
+        name: helloworlddemo
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworlddemo-service
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 8080
+      port: 8080
+      nodePort: 30088
+  selector:
+    app: helloworlddemo

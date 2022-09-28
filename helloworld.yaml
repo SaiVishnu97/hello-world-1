@@ -16,7 +16,7 @@ spec:
         app: helloworlddemo
     spec:
       containers:
-      - image: saivishnukottedockerid/helloworlddemo:v1
+      - image: saivishnukottedockerid/helloworlddemo
         imagePullPolicy: Always
         name: helloworlddemo
 

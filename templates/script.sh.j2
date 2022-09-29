@@ -1,0 +1,4 @@
+#!/bin/bash
+wget --user=admin --password=admin http://172.31.17.206:8081/repository/HelloWorldDemo/Demo/helloworlddemo/{{artifactID}}/helloworlddemo-{{artifactID}}.war
+mv helloworlddemo*.war helloworld.war
+mv helloworld.war /var/lib/tomcat9/webapps/

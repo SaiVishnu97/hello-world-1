@@ -1,0 +1,5 @@
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep 29 09:28 awk
+-rwxrwxr-x 1 ubuntu ubuntu   41 Sep 29 07:03 external_vars.yaml
+-rwxrwxr-x 1 ubuntu ubuntu  625 Sep 29 07:08 playbook.yaml
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep 29 09:29 samp.txt
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep 29 06:39 templates

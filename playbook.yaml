@@ -1,25 +1,5 @@
 - name: Deploying to tomcat server
   hosts: tomcat01
   become: yes
-  vars_files:
-  - external_vars.yaml
-  tasks:
-  - name: Changing the configuration for the artifact
-    ansible.builtin.template:
-      src: templates/server.xml.j2
-      dest: /etc/tomcat9/server.xml
-      owner: root
-      group: tomcat
-      mode: '0640'
-    notify:
-    - Restart tomcat
-  - name: Pulling the artifact from the nexus repository
-    ansible.builtin.template:
-      src: templates/script.sh.j2
-      dest: /tmp
-  - command: bash /tmp/script.sh.j2
-  handlers:
-  - name: Restart tomcat
-    service:
-      name: tomcat9
-      state: restarted
+  roles:
+  - demo
